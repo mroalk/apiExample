@@ -4,43 +4,43 @@
       "id": 0,
       "Description": "A burger with cheese added",
       "Ingredients":["bun", "cheese", "ground beef"],
-      "How to Cook": ""
+      "Recipe": ""
     },
     "Waffle": {
       "id": 1,
       "Description": "Rectangular Breakfast bread. Fried chicken not included.",
       "Ingredients":["milk","egg","flour"],
-      "How to Cook": ""
+      "Recipe": ""
     },
     "Bean Soup": {
       "id": 2,
       "Description": "Soup, made predominantly with beans.",
       "Ingredients":["beans","bullion","seasonings","coconut milk"],
-      "How to Cook": ""
+      "Recipe": ""
     },
     "Cheese Pizza": {
       "id": 3,
       "Description": "Doesn't come with pineapple, but should.",
       "Ingredients":["pizza dough", "cheese","bulk canned marinara"],
-      "How to Cook": ""
+      "Recipe": ""
     },
     "Caesar Salad": {
       "id": 4,
       "Description": "A salad even Augustus would love.",
       "Ingredients":["lettuce","dressing","croutons","betrayal","cheese"],
-      "How to Cook": ""
+      "Recipe": ""
     },
     "Fried Chicken": {
       "id": 5,
       "Description": "Best with waffles. Skip the syrup.",
       "Ingredients":["chicken", "batter"],
-      "How to Cook": ""
+      "Recipe": ""
     },
     "Nachos": {
-      "id": 5,
+      "id": 6,
       "Description": "Just like your school cafeteria used to make.",
       "Ingredients":["fried tortilla triangles","bulk cheese facsimile"],
-      "How to Cook": ""
+      "Recipe": ""
     }
   }
 }

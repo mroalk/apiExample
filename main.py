@@ -2,15 +2,20 @@
 # Write an api that accepts a list of up to 10 food items, and number of meals desired.
 # Call an AI API to build/save to db a menu, recipes, and list of groceries
 #
-# APIs to implement:
-# POST /menus
-# GET /menus/:id (gives a summary)
-# GET /menus/:id/shopping-list
-# GET /menus/:id/meals/:meal-id/recipe-instructions
+# APIs endpoints:
+# POST /menus - Written
+# GET /menus/:id (gives a summary) - Written
+# GET /menus/:id/shopping-list - Written
+# GET /menus/:id/meals/:meal-id/recipe-instructions - Not Implemented
 #
 #
 
+import menuParse
+
 from flask import Flask
+
+from menuParse import foodAspect
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -21,17 +26,20 @@ def basePath():
 @app.route("/menus/:id")
 def describeFoodItem():
     # This should provide a description of what the food item is.
-    return "Hello Food Item."
+    description = foodAspect(id,"Description")
+    return description
 
 @app.route("/menus/:id/shopping-list")
 def listIngredients():
     # This should return a list of the ingredients for a food item
-    return "Hello Ingredients."
+    ingredients = foodAspect(id,'Ingredients')
+    return ingredients
 
 @app.route("/menus/:id/meals/:meal-id/recipe-instructions")
 def howToCook():
     # This should provide a recipe for the meal requested.
-    return "Hello Recipe."
+    recipe = foodAspect(id, 'Recipe')
+    return recipe
 
 @app.route("/menus/")
 def createMenu(foods,numOfMeals):
