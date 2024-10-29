@@ -3,7 +3,7 @@
 # Call an AI API to build/save to db a menu, recipes, and list of groceries
 #
 # APIs endpoints:
-# POST /menus - Written
+# POST /menus - Not Implemented
 # GET /menus/:id (gives a summary) - Written
 # GET /menus/:id/shopping-list - Written
 # GET /menus/:id/meals/:meal-id/recipe-instructions - Not Implemented
@@ -18,10 +18,12 @@ from menuParse import foodAspect
 
 app = Flask(__name__)
 
+
 @app.route("/")
 def basePath():
     # Set up a basic "how to use this API" response.
     return "Hello."
+
 
 @app.route("/menus/:id")
 def describeFoodItem():
@@ -29,11 +31,13 @@ def describeFoodItem():
     description = foodAspect(id,"Description")
     return description
 
+
 @app.route("/menus/:id/shopping-list")
 def listIngredients():
     # This should return a list of the ingredients for a food item
     ingredients = foodAspect(id,'Ingredients')
     return ingredients
+
 
 @app.route("/menus/:id/meals/:meal-id/recipe-instructions")
 def howToCook():

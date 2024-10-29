@@ -4,43 +4,43 @@
       "id": 0,
       "Description": "A burger with cheese added",
       "Ingredients":["bun", "cheese", "ground beef"],
-      "Recipe": ""
+      "Recipe": "cook ground beef until brown. Apply cheese. Once melted, apply to bun."
     },
     "Waffle": {
       "id": 1,
       "Description": "Rectangular Breakfast bread. Fried chicken not included.",
       "Ingredients":["milk","egg","flour"],
-      "Recipe": ""
+      "Recipe": "whisk ingredients together, pour in waffle iron. Remove once done."
     },
     "Bean Soup": {
       "id": 2,
       "Description": "Soup, made predominantly with beans.",
       "Ingredients":["beans","bullion","seasonings","coconut milk"],
-      "Recipe": ""
+      "Recipe": "Put ingredients in pot. Boil."
     },
     "Cheese Pizza": {
       "id": 3,
       "Description": "Doesn't come with pineapple, but should.",
       "Ingredients":["pizza dough", "cheese","bulk canned marinara"],
-      "Recipe": ""
+      "Recipe": "apply marinara and cheese to dough. Bake."
     },
     "Caesar Salad": {
       "id": 4,
       "Description": "A salad even Augustus would love.",
       "Ingredients":["lettuce","dressing","croutons","betrayal","cheese"],
-      "Recipe": ""
+      "Recipe": "Mix all ingredients, be cautious of knives."
     },
     "Fried Chicken": {
       "id": 5,
       "Description": "Best with waffles. Skip the syrup.",
       "Ingredients":["chicken", "batter"],
-      "Recipe": ""
+      "Recipe": "batter chicken. deep fry."
     },
     "Nachos": {
       "id": 6,
       "Description": "Just like your school cafeteria used to make.",
       "Ingredients":["fried tortilla triangles","bulk cheese facsimile"],
-      "Recipe": ""
+      "Recipe": "Put fried tortilla triangles on baking sheet. Apply cheese facsimile. Bake. Ignore how cheese never gets hot."
     }
   }
 }
