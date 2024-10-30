@@ -22,10 +22,17 @@ def foodAspect(id,characteristic):
             return foodJson['foodItems'][i][characteristic]
 
 def menuCreator(foodList,mealCount):
-    #Resolve duplicate ids before generating list?
+    #This removes duplicates before processing:
+    foodList = list(set(foodList))
     menuList = []
     for f in foodList:
         recipe = foodAspect(f,'Recipe')
         shoppingList = foodAspect(f,'Ingredients')
         foodPlot = [recipe,shoppingList]
         menuList.append(foodPlot)
+    return menuList
+
+def menuStorage(menu):
+    # Format this to take the data from menuCreator and section it into table data for a database.
+    # This should then return a menu ID which can be retrieved via subsequent API calls.
+    return "menuStorage."

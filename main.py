@@ -8,16 +8,25 @@
 # GET /menus/:id/shopping-list - Written
 # GET /menus/:id/meals/:meal-id/recipe-instructions - Not Implemented
 #
-#
+# Things to build:
+# Logging.
+# Integration with AI? Some kind of external service.
+# Maybe just write to a database instead?
 
-import menuParse
-
+import logging
+import logging.handlers
+import os.path
 from flask import Flask
+from menuParse import foodAspect, menuCreator
 
-from menuParse import foodAspect
-
+#Logging Configuration
+path = os.path.dirname(os.path.realpath(__name__))
+logFile = os.path.join(path,'apiExample.log')
+log = logging.getLogger('apiExample')
+log.setLevel(logging.INFO)
+handler = logging.handlers.RotatingFileHandler(log,maxBytes=1048576,backupCount=3)
+handler.setFormatter('%(asctime)s %(levelname)s: %(message)s [in %(pathname)s::%(lineno)d]')
 app = Flask(__name__)
-
 
 @app.route("/")
 def basePath():
@@ -52,4 +61,5 @@ def createMenu(foods,numOfMeals):
     #This takes up to 10 food items
     # builds/saves to db:
     #   the menu, the recipes, and the list of grocery items needed.
+    menu = menuCreator(foods,numOfMeals)
     return "Foods: {0}, Number Ordered: {1}".format(foods, numOfMeals)
