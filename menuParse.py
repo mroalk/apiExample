@@ -34,5 +34,6 @@ def menuCreator(foodList,mealCount):
 
 def menuStorage(menu):
     # Format this to take the data from menuCreator and section it into table data for a database.
+    # Pausing this until I can find an easily portable DB tech to standup and use for testing.
     # This should then return a menu ID which can be retrieved via subsequent API calls.
     return "menuStorage."
