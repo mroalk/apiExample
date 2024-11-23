@@ -63,4 +63,4 @@ def createMenu(foods,numOfMeals):
     #   the menu, the recipes, and the list of grocery items needed.
     # Pausing this until I can find a portable DB tech to utilize.
     menu = menuCreator(foods,numOfMeals)
-    return "Foods: {0}, Number Ordered: {1}".format(foods, numOfMeals)
+    return "Menu Number: {0}.".format(menu)
